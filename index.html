@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width", initial-scale="1.0">
+ 	<!-- FontAwsome & Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- map include css -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+	<title>ইউনিয়ন পরিষদ</title>
+</head>
+<body>
+<header>
+	<!--Start top heading -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top p-0 border-bottom">
+	  <div class="container">
+	  	<img src="img/logo.png" class="p-2">
+	    <a class="navbar-brand h1" href="#"> ০৩ নং টোক ইউনিয়ন</a>
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+	    <div class="collapse navbar-collapse" id="navbarNav">
+	      <ul class="navbar-nav ms-auto">
+	        <li class="nav-item">
+	          <a class="nav-link active" aria-current="page" href="#">
+	          	হোম
+	          </a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link active" aria-current="page" href="#">
+	          	নোটিশ
+	          </a>
+	        </li>
+	        <li class="nav-item dropdown">
+	          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+	           নাগরিক
+	          </a>
+	          <ul class="dropdown-menu mt-2 p-0" aria-labelledby="navbarDropdownMenuLink">
+	            <li><a class="dropdown-item" href="application.html">নাগরিকত্ব সনদের আবেদন</a></li>
+	            <li><a class="dropdown-item" href="Search.html">নাগরিকত্ব সনদের আবেদন যাচাই</a></li>
+	            <li><a class="dropdown-item" href="Search.html">নাগরিকত্ব সনদ পত্র যাচাই</a></li>
+	          </ul>
+	        </li>
+	        <li class="nav-item dropdown">
+	          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+	           ওয়ারিশ
+	          </a>
+	          <ul class="dropdown-menu mt-2 p-0" aria-labelledby="navbarDropdownMenuLink">
+	            <li><a class="dropdown-item" href="application.html">ওয়ারিশ সনদের আবেদন</a></li>
+	            <li><a class="dropdown-item" href="Search.html">ওয়ারিশ সনদের আবেদন যাচাই</a></li>
+	            <li><a class="dropdown-item" href="Search.html">ওয়ারিশ সনদ পত্র যাচাই</a></li>
+	          </ul>
+	        </li>
+	        <li class="nav-item dropdown">
+	          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+	           ট্রেড লাইসেন্স
+	          </a>
+	          <ul class="dropdown-menu mt-2 p-0" aria-labelledby="navbarDropdownMenuLink">
+	            <li><a class="dropdown-item" href="application.html">ট্রেড লাইসেন্স আবেদন</a></li>
+	            <li><a class="dropdown-item" href="Search.html">ট্রেড লাইসেন্স আবেদন যাচাই</a></li>
+	            <li><a class="dropdown-item" href="#">ট্রেড লাইসেন্স নবায়ন</a></li>
+	            <li><a class="dropdown-item" href="Search.html">ট্রেড লাইসেন্স যাচাই</a></li>
+	          </ul>
+	        </li> 
+	        <li class="nav-item dropdown">
+	          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+	            অন্যান্য
+	          </a>
+	          <ul class="dropdown-menu mt-2 p-0" aria-labelledby="navbarDropdownMenuLink">
+	            <li><a class="dropdown-item" href="application.html">মৃত্যু সনদ</a></li>
+	            <li><a class="dropdown-item" href="application.html">চারিত্রিক সনদ</a></li>
+	            <li><a class="dropdown-item" href="application.html">ভূমিহীন সনদ</a></li>
+	            <li><a class="dropdown-item" href="application.html">প্রত্যয়ন পত্র</a></li>
+	          </ul>
+	        </li>
+	        <li class="nav-item dropdown">
+	          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+	            প্রকল্প সমূহ
+	          </a>
+	          <ul class="dropdown-menu mt-2 p-0" aria-labelledby="navbarDropdownMenuLink">
+	            <li><a class="dropdown-item" href="#">চলমান</a></li>
+	            <li><a class="dropdown-item" href="#">সম্পন্ন</a></li>
+	            <li><a class="dropdown-item" href="#">প্রস্তাবিত</a></li>
+	          </ul>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link active" aria-current="page" href="#">
+	          	ব্লগ
+	          </a>
+	        </li>
+	      </ul>
+	      <button class="btn btn-sm btn-primary ms-auto">English</button>
+	    </div>
+	  </div>
+	</nav>
+</header>
+<!--Carosel -->
+<div class="carosel">
+	<div id="carouselExampleCaptions"class="carousel slide" data-bs-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+			<img src="img/Banner.png" class="d-block w-100" alt="...">
+			<!-- <div class="carousel-caption">
+			<h5 class="text-dark">Slide One</h5>
+			<p class="text-primary">Some representative placeholder content for the first slide.</p>
+			</div> -->
+			</div>
+			<div class="carousel-item">
+			<img src="img/Banner.png" class="d-block w-100" alt="...">
+			<!-- <div class="carousel-caption">
+			<h5 class="text-dark">Slide Two</h5>
+			<p class="text-primary">Some representative placeholder content for the second slide.</p>
+			</div> -->
+			</div>
+			<div class="carousel-item">
+			<img src="img/Banner.png" class="d-block w-100" alt="...">
+			<!-- <div class="carousel-caption">
+			<h5 class="text-dark">Slide Three</h5>
+			<p class="text-primary">Some representative placeholder content for the third slide.</p>
+			</div> -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- marquee tag -->
+<div id="marquee">
+	<div class="container">
+		<!-- <span>নোটিশ</span> -->
+		<marquee class="p-2">
+			১৭ই মার্চ বঙ্গবন্ধুর জন্ম শতবর্ষ উদযাপনের অনুষ্ঠানসূচী | 
+			১৭ই মার্চ বঙ্গবন্ধুর জন্ম শতবর্ষ উদযাপনের অনুষ্ঠানসূচী	|
+			১৭ই মার্চ বঙ্গবন্ধুর জন্ম শতবর্ষ উদযাপনের অনুষ্ঠানসূচী | 
+			১৭ই মার্চ বঙ্গবন্ধুর জন্ম শতবর্ষ উদযাপনের অনুষ্ঠানসূচী	|
+		</marquee>
+	</div>
+</div>
+<!-- Present Goverment Employe -->
+<section id="employe" class="">
+	<div class="bg-light p-3 border-top border-bottom">
+		<h2 class="text-center"> ইউনিয়ন পরিষদ কর্মকর্তাবৃন্দ </h2>
+        <!-- <p class="lead text-center mb-3">
+        	Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    	</p> -->
+	</div>
+    <div class="container mt-5">
+        <div class="row g-4 ">
+        	<div class="col-md-6 col-lg-3">
+                <div class="card bg-light">
+                    <div class="card-body text-center">
+                        <img src="img/author.png" class="rounded-circle mb-3 w-50">
+                        <h3 class="text-title">Jhon Doy</h3>
+                        <p class="card-text">
+                            বর্তমান সচিব
+                        </p>
+                        <a href="#">
+                            <i class="fa fa-twitter text-dark mx-1"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-facebook text-dark mx-1"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-linkedin text-dark mx-1"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-youtube text-dark mx-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card bg-light">
+                    <div class="card-body text-center">
+                        <img src="img/author.png" class="rounded-circle mb-3 w-50">
+                        <h3 class="text-title">Jhon Doy</h3>
+                        <p class="card-text">
+                            বর্তমান চেয়ারম্যান
+                        </p>
+                        <a href="#">
+                            <i class="fa fa-twitter text-dark mx-1"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-facebook text-dark mx-1"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-linkedin text-dark mx-1"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-youtube text-dark mx-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="card bg-light">
+                    <div class="card-body text-center">
+                        <img src="img/author.png" class="rounded-circle mb-3 w-50">
+                        <h3 class="text-title">Jhon Doy</h3>
+                        <p class="card-text">
+                            বর্তমান মেম্বার 
+                        </p>
+                        <a href="#">
+                            <i class="fa fa-twitter text-dark mx-1"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-facebook text-dark mx-1"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-linkedin text-dark mx-1"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-youtube text-dark mx-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card bg-light">
+                    <div class="card-body text-center">
+                        <img src="img/author.png" class="rounded-circle mb-3 w-50">
+                        <h3 class="text-title">Jhon Doy</h3>
+                        <p class="card-text">
+                            বর্তমান মেম্বার
+                        </p>
+                        <a href="#">
+                            <i class="fa fa-twitter text-dark mx-1"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-facebook text-dark mx-1"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-linkedin text-dark mx-1"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-youtube text-dark mx-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Others Category -->
+<section class="mt-5">
+	<div class="p-3 bg-light border-top border-bottom">
+		<h2 class="text-center ">  অন্যান্য তালিকা </h2>
+        <!-- <p class="lead text-center mb-3">
+        	Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    	</p> -->
+	</div>
+	<div class="container mt-5 center">
+		<div class="row row-cols-1 row-cols-md-4 g-4">
+		  <div class="col">
+		    <div class="card h-100">
+			    <a href="#">
+			      <img src="img/freedom.png"class="card-img-top w-25"alt="freedom.png">
+			      <div class="card-body">
+			        <h5 class="card-title">মুক্তিযোদ্ধা তালিকা</h5>
+			      </div>
+			    </a>
+		    </div>
+		  </div>
+		  <div class="col">
+		    <div class="card h-100">
+		    	<a href="#">
+			      <img src="img/voter.png" class="card-img-top w-25" alt="...">
+			      <div class="card-body">
+			        <h5 class="card-title">ভোটার তালিকা</h5>
+			      </div>
+			  	</a>
+		    </div>
+		  </div>
+		  <div class="col">
+		    <div class="card h-100">
+		    	<a href="#">
+			      <img src="img/old.png" class="card-img-top w-25" alt="...">
+			      <div class="card-body">
+			        <h5 class="card-title">বয়স্ক ভাতা</h5>
+			      </div>
+			  	</a>
+		    </div>
+		  </div>
+		  <div class="col">
+		    <div class="card h-100">
+		    	<a href="#">
+			      <img src="img/dustho.png" class="card-img-top w-25" alt="...">
+			      <div class="card-body">
+			        <h5 class="card-title">দুস্থ তালিকা</h5>
+			      </div>
+			  	</a>
+		    </div>
+		  </div>
+		  <div class="col">
+		    <div class="card h-100">
+		    	<a href="#">
+			      <img src="img/ma.png" class="card-img-top w-25" alt="...">
+			      <div class="card-body">
+			        <h5 class="card-title">মাতৃত্যকালীন ভাতা</h5>
+			      </div>
+			  	</a>
+		    </div>
+		  </div>
+		  <div class="col">
+		    <div class="card h-100">
+		    	<a href="#">
+			      <img src="img/bidoba1.png" class="card-img-top w-25" alt="...">
+			      <div class="card-body">
+			        <h5 class="card-title">বিধবা ভাতা</h5>
+			      </div>
+			  	</a>
+		    </div>
+		  </div>
+		  <div class="col">
+		    <div class="card h-100">
+		    	<a href="#">
+			      <img src="img/protibondi.png" class="card-img-top w-25" alt="...">
+			      <div class="card-body">
+			        <h5 class="card-title">প্রতিবন্ধী ভাতা</h5>
+			      </div>
+			  	</a>
+		    </div>
+		  </div>
+		  <div class="col">
+		    <div class="card h-100">
+		    	<a href="#">
+			      <img src="img/bgb1.png" class="card-img-top w-25" alt="...">
+			      <div class="card-body">
+			        <h5 class="card-title">ভি জি ডি</h5>
+			      </div>
+			  	</a>
+		    </div>
+		  </div>
+		  <div class="col">
+		    <div class="card h-100">
+		    	<a href="#">
+			      <img src="img/khana.png" class="card-img-top w-25" alt="...">
+			      <div class="card-body">
+			        <h5 class="card-title">খানা সমূহ</h5>
+			      </div>
+			  	</a>
+		    </div>
+		  </div>
+		  <div class="col">
+		    <div class="card h-100">
+		    	<a href="#">
+			      <img src="img/dailycollection.png" class="card-img-top w-25" alt="...">
+			      <div class="card-body">
+			        <h5 class="card-title">দৈনিক কালেকশন</h5>
+			      </div>
+			  	</a>
+		    </div>
+		  </div>
+		  <div class="col">
+		    <div class="card h-100">
+		    	<a href="#">
+			      <img src="img/monthley.png" class="card-img-top w-25" alt="...">
+			      <div class="card-body">
+			        <h5 class="card-title">মাসিক কালেকশন</h5>
+			      </div>
+			  	</a>
+		    </div>
+		  </div>
+		  <div class="col">
+		    <div class="card h-100">
+		    	<a href="#">
+			      <img src="img/yearly.png" class="card-img-top w-25" alt="...">
+			      <div class="card-body">
+			        <h5 class="card-title">অর্থ বছরের কালেকশন</h5>
+			      </div>
+			  	</a>
+		    </div>
+		  </div>
+		</div>
+	</div>
+</section>
+
+<!-- Contact & map -->
+    <section class="p-5  mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md">
+                    <h2 class="text-center mb-4">যোগাযোগ</h2>
+                    <ul class="list-group list-group-flush lead">
+                        <li class="list-group-item">
+                            <span class="fw-bold"> প্রধান অবস্থান :</span> ৩ নং টোক ইউনিয়ন পরিষদ
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">উপজেলা  :</span> গাজীপুর
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">বিভাগ  :</span> ঢাকা
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">মুঠোফোন :</span> +88018 111 111 11
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold"> ইমেইল :</span> tok.up.bd@gmail.com
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md">
+                    <div id="map" class="align-items-center justify-content-between">  
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!-- footer -->
+<footer class="p-2 bg-light  border-top text-center position-relative">
+    <div class="container mt-1">
+        <p class="lead h1">Copyright &copy; December 31<sup>th</sup>, 2021
+        </p>
+    </div>
+</footer>
+
+
+<!-- Java Script -->
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<!-- map include js -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYW1zMDciLCJhIjoiY2tzc2hxMXNyMGswbzJyanNubGR1eGx5NCJ9.AE5FNsyEEfzSX0rjjlXx9A';
+    var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11'
+    });
+</script>
+
+<!-- Other Java Script -->
+
+</body>
+</html>

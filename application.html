@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width", initial-scale="1.0">
+ 	<!-- FontAwsome & Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- map include css -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+	<title>ইউনিয়ন পরিষদ</title>
+</head>
+<body>
+<header>
+	<!--Start top heading -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top p-0 border-bottom">
+	  <div class="container">
+	  	<img src="img/logo.png" class="p-2">
+	    <a class="navbar-brand h1" href="#"> ০৩ নং টোক ইউনিয়ন</a>
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+	    <div class="collapse navbar-collapse" id="navbarNav">
+	      <ul class="navbar-nav ms-auto">
+	        <li class="nav-item">
+	          <a class="nav-link active" aria-current="page" href="#">
+	          	হোম
+	          </a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link active" aria-current="page" href="#">
+	          	নোটিশ
+	          </a>
+	        </li>
+	        <li class="nav-item dropdown">
+	          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+	           নাগরিক
+	          </a>
+	          <ul class="dropdown-menu mt-2 p-0" aria-labelledby="navbarDropdownMenuLink">
+	            <li><a class="dropdown-item" href="application.html">নাগরিকত্ব সনদের আবেদন</a></li>
+	            <li><a class="dropdown-item" href="Search.html">নাগরিকত্ব সনদের আবেদন যাচাই</a></li>
+	            <li><a class="dropdown-item" href="Search.html">নাগরিকত্ব সনদ পত্র যাচাই</a></li>
+	          </ul>
+	        </li>
+	        <li class="nav-item dropdown">
+	          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+	           ওয়ারিশ
+	          </a>
+	          <ul class="dropdown-menu mt-2 p-0" aria-labelledby="navbarDropdownMenuLink">
+	            <li><a class="dropdown-item" href="application.html">ওয়ারিশ সনদের আবেদন</a></li>
+	            <li><a class="dropdown-item" href="Search.html">ওয়ারিশ সনদের আবেদন যাচাই</a></li>
+	            <li><a class="dropdown-item" href="Search.html">ওয়ারিশ সনদ পত্র যাচাই</a></li>
+	          </ul>
+	        </li>
+	        <li class="nav-item dropdown">
+	          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+	           ট্রেড লাইসেন্স
+	          </a>
+	          <ul class="dropdown-menu mt-2 p-0" aria-labelledby="navbarDropdownMenuLink">
+	            <li><a class="dropdown-item" href="application.html">ট্রেড লাইসেন্স আবেদন</a></li>
+	            <li><a class="dropdown-item" href="Search.html">ট্রেড লাইসেন্স আবেদন যাচাই</a></li>
+	            <li><a class="dropdown-item" href="#">ট্রেড লাইসেন্স নবায়ন</a></li>
+	            <li><a class="dropdown-item" href="Search.html">ট্রেড লাইসেন্স যাচাই</a></li>
+	          </ul>
+	        </li> 
+	        <li class="nav-item dropdown">
+	          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+	            অন্যান্য
+	          </a>
+	          <ul class="dropdown-menu mt-2 p-0" aria-labelledby="navbarDropdownMenuLink">
+	            <li><a class="dropdown-item" href="application.html">মৃত্যু সনদ</a></li>
+	            <li><a class="dropdown-item" href="application.html">চারিত্রিক সনদ</a></li>
+	            <li><a class="dropdown-item" href="application.html">ভূমিহীন সনদ</a></li>
+	            <li><a class="dropdown-item" href="application.html">প্রত্যয়ন পত্র</a></li>
+	          </ul>
+	        </li>
+	        <li class="nav-item dropdown">
+	          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+	            প্রকল্প সমূহ
+	          </a>
+	          <ul class="dropdown-menu mt-2 p-0" aria-labelledby="navbarDropdownMenuLink">
+	            <li><a class="dropdown-item" href="#">চলমান</a></li>
+	            <li><a class="dropdown-item" href="#">সম্পন্ন</a></li>
+	            <li><a class="dropdown-item" href="#">প্রস্তাবিত</a></li>
+	          </ul>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link active" aria-current="page" href="#">
+	          	ব্লগ
+	          </a>
+	        </li>
+	      </ul>
+	      <button class="btn btn-sm btn-primary ms-auto">English</button>
+	    </div>
+	  </div>
+	</nav>
+</header>
+
+<main>
+ 	<div id="" class="bg-dark border-top border-bottom">
+ 		<h4 class="text-center text-white p-2">"__________" আবেদন</h4>
+ 	</div>
+ 	<div class="container mt-5 mb-5 p-5">
+ 		<form class="row g-3">
+		  <div class="col-md-6">
+		  	<label for="inputEmail4" class="form-label">First Name</label>
+		    <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+		  </div>
+		  <div class="col-md-6">
+		  	<label for="inputEmail4" class="form-label">Last Name</label>
+		    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+		  </div>
+		  <div class="col-md-6">
+			    <label for="inputEmail4" class="form-label">Email</label>
+			    <input type="email" class="form-control" id="inputEmail4">
+		  </div>
+		  <div class="col-md-6">
+			    <label for="inputPassword4" class="form-label">Password</label>
+			    <input type="password" class="form-control" id="inputPassword4">
+		  </div>
+		  <div class="col-12">
+			    <label for="inputAddress2" class="form-label">Present Address</label>
+			    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+		  </div>
+		  <div class="col-md-6">
+			    <label for="inputCity" class="form-label">City</label>
+			    <input type="text" class="form-control" id="inputCity">
+		  </div>
+		  <div class="col-md-4">
+			    <label for="inputState" class="form-label">State</label>
+			    <select id="inputState" class="form-select">
+			      <option selected>Choose...</option>
+			      <option>...</option>
+			    </select>
+		  </div>
+		  <div class="col-md-2">
+			    <label for="inputZip" class="form-label">Zip</label>
+			    <input type="text" class="form-control" id="inputZip">
+		  </div>
+		  <div class="col-12">
+			    <label for="inputAddress2" class="form-label">Permanent Address</label>
+			    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+		  </div>
+		  <div class="col-md-6">
+			    <label for="inputCity" class="form-label">City</label>
+			    <input type="text" class="form-control" id="inputCity">
+		  </div>
+		  <div class="col-md-4">
+			    <label for="inputState" class="form-label">State</label>
+			    <select id="inputState" class="form-select">
+			      <option selected>Choose...</option>
+			      <option>...</option>
+			    </select>
+		  </div>
+		  <div class="col-md-2">
+			    <label for="inputZip" class="form-label">Zip</label>
+			    <input type="text" class="form-control" id="inputZip">
+		  </div>
+		  <div class="col-12">
+			    <div class="form-check">
+			      <input class="form-check-input" type="checkbox" id="gridCheck">
+			      <label class="form-check-label" for="gridCheck">
+			        Check me out
+			      </label>
+			    </div>
+		  </div>
+		  <div class="col-12">
+		    	<button type="submit" class="btn btn-primary">দাখিল করুন</button>
+		  </div>
+		</form>
+ 	</div>
+</main>
+
+<!-- Contact & map -->
+<section class="p-5 bg-light mt-5">
+    <div class="container">
+        <div class="row g-3">
+            <div class="col-md">
+                <h2 class="text-center mb-4">যোগাযোগ</h2>
+                <ul class="list-group list-group-flush lead">
+                    <li class="list-group-item">
+                        <span class="fw-bold"> প্রধান অবস্থান :</span> ৩ নং টোক ইউনিয়ন পরিষদ
+                    </li>
+                    <li class="list-group-item">
+                        <span class="fw-bold">উপজেলা  :</span> গাজীপুর
+                    </li>
+                    <li class="list-group-item">
+                        <span class="fw-bold">বিভাগ  :</span> ঢাকা
+                    </li>
+                    <li class="list-group-item">
+                        <span class="fw-bold">মুঠোফোন :</span> +88018 111 111 11
+                    </li>
+                    <li class="list-group-item">
+                        <span class="fw-bold"> ইমেইল :</span> tok.up.bd@gmail.com
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md">
+                <div id="map" class="align-items-center justify-content-between">  
+                </div>  
+            </div>
+            <div class="col-md">
+                <h2 class="text-center mb-4">অন্যান্য</h2>
+                <ul class="list-group list-group-flush lead">
+                    <li class="list-group-item text-center">
+                    	<span class="fw-bold" >ভ্যাকসিন নিবন্ধন :</span>
+                        <a href="https://surokkha.gov.bd/"target="_blank" class="fw-bold">
+                        	Surokkha
+                    	</a> 
+                    </li>
+                    <li class="list-group-item text-center">
+                    	<span class="fw-bold">Result :</span>
+                        <a href="http://www.educationboardresults.gov.bd/"target="_blank" class="fw-bold">
+                        	JSC / SSC / HSC
+                    	</a> 
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- footer -->
+<footer class="p-2 bg-light  border-top text-center position-relative">
+    <div class="container mt-1">
+        <p class="lead h1">Copyright &copy; December 31<sup>th</sup>, 2021
+        </p>
+    </div>
+</footer>
+
+
+<!-- Java Script -->
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<!-- map include js -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYW1zMDciLCJhIjoiY2tzc2hxMXNyMGswbzJyanNubGR1eGx5NCJ9.AE5FNsyEEfzSX0rjjlXx9A';
+    var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11'
+    });
+</script>
+
+<!-- Other Java Script -->
+
+</body>
+</html>
