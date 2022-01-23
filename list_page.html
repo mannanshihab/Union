@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- map include css -->
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
-	<title>আবেদন | ইউনিয়ন পরিষদ</title>
+	<title>তালিকা | ইউনিয়ন পরিষদ</title>
 </head>
 <body>
 <header>
@@ -98,86 +98,112 @@
 	</nav>
 </header>
 
-<main>
- 	<div id="" class="bg-dark border-top border-bottom">
- 		<h4 class="text-center text-white p-2">"__________" আবেদন</h4>
- 	</div>
- 	<div class="container mt-5 mb-5 p-5">
- 		<form class="row g-3">
-		  <div class="col-md-6">
-		  	<label for="inputEmail4" class="form-label">First Name</label>
-		    <input type="text" class="form-control" placeholder="First name" aria-label="First name">
-		  </div>
-		  <div class="col-md-6">
-		  	<label for="inputEmail4" class="form-label">Last Name</label>
-		    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-		  </div>
-		  <div class="col-md-6">
-			    <label for="inputEmail4" class="form-label">Email</label>
-			    <input type="email" class="form-control" id="inputEmail4">
-		  </div>
-		  <div class="col-md-6">
-			    <label for="inputPassword4" class="form-label">Password</label>
-			    <input type="password" class="form-control" id="inputPassword4">
-		  </div>
-		  <div class="col-12">
-			    <label for="inputAddress2" class="form-label">Present Address</label>
-			    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-		  </div>
-		  <div class="col-md-6">
-			    <label for="inputCity" class="form-label">City</label>
-			    <input type="text" class="form-control" id="inputCity">
-		  </div>
-		  <div class="col-md-4">
-			    <label for="inputState" class="form-label">State</label>
-			    <select id="inputState" class="form-select">
-			      <option selected>Choose...</option>
-			      <option>...</option>
-			    </select>
-		  </div>
-		  <div class="col-md-2">
-			    <label for="inputZip" class="form-label">Zip</label>
-			    <input type="text" class="form-control" id="inputZip">
-		  </div>
-		  <div class="col-12">
-			    <label for="inputAddress2" class="form-label">Permanent Address</label>
-			    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-		  </div>
-		  <div class="col-md-6">
-			    <label for="inputCity" class="form-label">City</label>
-			    <input type="text" class="form-control" id="inputCity">
-		  </div>
-		  <div class="col-md-4">
-			    <label for="inputState" class="form-label">State</label>
-			    <select id="inputState" class="form-select">
-			      <option selected>Choose...</option>
-			      <option>...</option>
-			    </select>
-		  </div>
-		  <div class="col-md-2">
-			    <label for="inputZip" class="form-label">Zip</label>
-			    <input type="text" class="form-control" id="inputZip">
-		  </div>
-		  <div class="col-12">
-			    <div class="form-check">
-			      <input class="form-check-input" type="checkbox" id="gridCheck">
-			      <label class="form-check-label" for="gridCheck">
-			        Check me out
-			      </label>
+<!-- Others Category -->
+<section class="">
+	<div class="container">
+            <div class="row">
+                <div class="col-md-8 mb-4 mt-5">
+                	<!-- title -->
+                	<div class="p-3 bg-light border mb-5">
+						<h2 class="text-center card-title">"_______" তালিকা </h2>
+					 </div>
+                    <!-- list -->
+                    <table class="table table-hover widget border">
+					  <thead class="text-center">
+					    <tr>
+					      <th scope="col">#</th>
+					      <th scope="col">নাম</th>
+					      <th scope="col">পিতার নাম</th>
+					      <th scope="col">ঠিকানা</th>
+					    </tr>
+					  </thead>
+					  <tbody class="text-center">
+					    <tr>
+					      <th scope="row">১</th>
+					      <td>মার্ক</td>
+					      <td> ডেন মার্ক</td>
+					      <td>টোক</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">২</th>
+					      <td>মার্ক</td>
+					      <td> ডেন মার্ক</td>
+					      <td>টোক</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">৩</th>
+					      <td>মার্ক</td> 
+					      <td> ডেন মার্ক</td>
+					      <td>টোক</td>
+					    </tr>
+					  </tbody>
+					</table><!--End list -->
 			    </div>
-		  </div>
-		  <div class="col-12">
-		    	<button type="submit" class="btn btn-primary">দাখিল করুন</button>
-		  </div>
-		</form>
- 	</div>
-</main>
+			    <!-- Side Section -->
+                <aside class="col-md-4 mb-4 mt-5 d-none d-md-block">
+                 	<section id="Search" class="col-md p-2 widget">
+                        <form class="d-flex p-3">
+                            <input class=" form-control me-2"  type="search" placeholder="খোঁজ করুন" aria-label="Search">
+                            <button class="btn btn-dark"type="submit">খোঁজ করুন</button>
+                        </form> 
+                    </section>
+                    <section id="Chaiman" class="col-md p-2 widget">
+                        <div class="card bg-light">
+		                    <div class="card-body lead text-center">
+		                        <img src="img/author.png" class="rounded-circle mb-3 w-50">
+		                        <h3 class="text-title">চেয়ারম্যান</h3>
+		                        <p class="card-text">
+		                            চেয়ারম্যান হলেন একটি সংস্থার প্রধান ব্যক্তিত্ব, যেমন— পরিচালনা পর্ষদ, কমিটি, বা স্বেচ্ছাসেবক সমাবেশ। 
+		                        </p>
+		                        <a href="#">
+		                            <i class="fa fa-twitter text-dark mx-1"></i>
+		                        </a>
+		                        <a href="#">
+		                            <i class="fa fa-facebook text-dark mx-1"></i>
+		                        </a>
+		                        <a href="#">
+		                            <i class="fa fa-linkedin text-dark mx-1"></i>
+		                        </a>
+		                        <a href="#">
+		                            <i class="fa fa-youtube text-dark mx-1"></i>
+		                        </a>
+		                    </div>
+		                </div>
+                    </section>
+                    <section id="WebSite_link" class="col-md p-2 widget">
+                        <div class="card lead ">
+                            <div class="card-body">
+                                <h3 class="widget-title">গুরুত্বপূর্ণ লিংক</h3>
+                                <ul>
+                                    <li>
+                                        <i class="fa fa-link"></i>
+                                        <a href="http://dhakaeducationboard.portal.gov.bd/" target="_blank"> ঢাকা বোর্ড</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-link"></i>
+                                        <a href="http://www.bmeb.gov.bd/" target="_blank">মাদ্রাসা বোর্ড</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-link lead"></i>
+                                        <a href="http://www.bteb.gov.bd/" target="_blank"> কারিগরি বোর্ড</a></li>
+                                    <li>
+                                        <i class="fa fa-link"></i>
+                                        <a href="https://surokkha.gov.bd/" target="_blank"> সুরক্ষা</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </aside>
+            </div>
+        </div>
+</section><!--End Others Category -->
 
-<!-- Contact & map -->
-<section class="p-5 bg-light mt-5">
-    <div class="container">
-        <div class="row g-2">
-            <div class="col-md p-2">
+<!-- Contact & Map -->
+<section>
+	<div class="container">
+		<div class="row g-4">
+            <div class="col-md">
                 <h2 class="text-center mb-4">যোগাযোগ</h2>
                 <ul class="list-group list-group-flush lead">
                     <li class="list-group-item">
@@ -193,18 +219,17 @@
                         <span class="fw-bold">মুঠোফোন :</span> +88018 111 111 11
                     </li>
                     <li class="list-group-item">
-                        <span class="fw-bold"> ইমেইল :</span> up@gmail.com
+                        <span class="fw-bold"> ইমেইল :</span> up.bd@gmail.com
                     </li>
                 </ul>
             </div>
-            <div class="col-md p-2">
+            <div class="col-md">
                 <div id="map" class="align-items-center justify-content-between">  
                 </div>  
             </div>
         </div>
-    </div>
-</section>
-
+	</div>
+</section><!--End Contact & Map -->    
 <!-- footer -->
 <footer class="p-2 bg-light  border-top text-center position-relative">
     <div class="container mt-1">
